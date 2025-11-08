@@ -6,10 +6,6 @@
             "defaultExecutablePath": "python",
             "arguments": ["hello.py"] 
         },
-        "enableProxyingHttpRequest": true,
-        "http": {
-            "DefaultAuthorizationLevel": "anonymous"
-        },
         "port": "8000"
     }
 }
