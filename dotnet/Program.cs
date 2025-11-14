@@ -17,7 +17,7 @@ builder.Services.AddMcpServer()
 
 builder.Logging.AddConsole(options =>
 {
-    options.LogToStandardErrorThreshold = LogLevel.Trace;
+    options.LogToStandardErrorThreshold = LogLevel.Error;
 });
 
 var app = builder.Build();
