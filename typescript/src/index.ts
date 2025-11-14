@@ -8,13 +8,16 @@ import { z } from "zod";
 // Function to create a new server instance for each request (stateless)
 function createServer() {
   const server = new McpServer({
-    name: "hello-world",
-    version: "1.0.0",
-    capabilities: {
-      resources: {},
-      tools: {},
+      name: "hello-world",
+      version: "1.0.0"
     },
-  });
+    { 
+      capabilities: {
+        resources: {},
+        tools: {},
+      }
+    }
+  );
 
 server.tool(
     "say_hello",
