@@ -22,6 +22,9 @@ builder.Logging.AddConsole(options =>
 
 var app = builder.Build();
 
+// Add root endpoint
+app.MapGet("/", () => "Custom handler is ready and running.");
+
 // Add health check endpoint
 app.MapGet("/api/healthz", () => "Healthy");
 
