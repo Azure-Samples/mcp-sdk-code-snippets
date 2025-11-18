@@ -1,6 +1,10 @@
 from typing import Any
-import sys, httpx
+import sys
+import logging
 from mcp.server.fastmcp import FastMCP
+
+# Reduce MCP SDK logging verbosity
+logging.getLogger("mcp").setLevel(logging.WARNING)
 
 # Initialize FastMCP server
 mcp = FastMCP("weather", stateless_http=True)
